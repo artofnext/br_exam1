@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 @font-face {
     font-family: 'aleo';
     src: url('../fonts/aleo-bold-webfont.woff2') format('woff2'),
@@ -40,7 +41,88 @@
 }
 
 
+
+
 body {
-    // background-color: aqua;
+    margin: 15px;
+    font-family: aleo, 'Times New Roman', Times, serif;
 }
 
+
+
+h1 {
+    font-family: aleo, 'Times New Roman', Times, serif;
+}
+
+.header__bg {
+    height: 742px;
+    max-height: 1770px;
+    display: block;
+    object-fit: cover;
+    // object-position: left;
+    width: 100%;
+    // height: 100%;
+}
+
+.container {
+    max-width: 1111px;
+    // width: 90%;
+    // margin: 0 auto;
+
+    position: absolute;
+    z-index: 1;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.header {
+    color: white;
+}
+
+.header__title {
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.header__slogan {
+    font-size: 22px;
+    letter-spacing: .3em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.search {
+    width: 650px;
+    // width: 50%;
+    height: 60px;
+    background-color: white;
+}
+
+.search__button {
+    background-color: $color-search-button;
+    height: 56px;
+    width: 150px;
+    border: none;
+    margin: 0 2px;
+}
+
+.button__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search__input {
+    height: inherit;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
