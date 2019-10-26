@@ -257,6 +257,14 @@ h1 {
 .icon {
     color: white;
     position: relative;
+
+    & svg {
+        fill: $color-main-blue;
+    }
+
+    &:hover svg {
+        fill: $color-icon-active;
+    }
 }
 
 .sec11_container {
