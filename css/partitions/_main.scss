@@ -291,3 +291,28 @@ h1 {
     font-size: 36px;
     left: -70px;
 }
+
+.sec {
+    position: relative;
+}
+
+.sec__container {
+    height: 370px;
+    width: 540px;
+    background-color: $color-block-background;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 235px;
+    // left: 333px;
+    // margin: 0;
+}
+
+.sec_right {
+    right: 333px;
+    // float: right;
+}
+
+
+
+
