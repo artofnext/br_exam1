@@ -1,3 +1,46 @@
-body {
-    background-color: aqua;
+@font-face {
+    font-family: 'aleo';
+    src: url('../fonts/aleo-bold-webfont.woff2') format('woff2'),
+         url('../fonts/aleo-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
 }
+@font-face {
+    font-family: 'aleo';
+    src: url('../fonts/aleo-light-webfont.woff2') format('woff2'),
+         url('../fonts/aleo-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aleo';
+    src: url('../fonts/aleo-regular-webfont.woff2') format('woff2'),
+         url('../fonts/aleo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aleo';
+    src: url('../fonts/aleo-bold-webfont.woff2') format('woff2'),
+         url('../fonts/aleo-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aleo';
+    src: url('../fonts/aleo-italic-webfont.woff2') format('woff2'),
+         url('../fonts/aleo-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+
+body {
+    // background-color: aqua;
+}
+
