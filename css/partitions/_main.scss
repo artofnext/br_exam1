@@ -77,10 +77,14 @@ h1 {
 .header__container, .sec1__container {
     position: absolute;
     z-index: 1;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
+}
+
+.sec1__container {
+    top: 50%;
 }
 
 .header {
@@ -125,6 +129,7 @@ h1 {
     height: inherit;
     box-sizing: border-box;
     flex-grow: 1;
+    padding-left: 15px;
 }
 
 .search {
@@ -146,8 +151,14 @@ h1 {
     a {
         color: white;
         text-decoration: none;
+
+        &:hover {
+            text-shadow: 0 0 5px white;
+        }
     }
 }
+
+
 
 .nav {
     height: 80px;
@@ -156,40 +167,116 @@ h1 {
     font-family: aleo, 'Times New Roman', Times, serif;
 }
 
-.logo {
-    font-family:'Josefin Sans', sans-serif;
-    font-size: 24px;
-}
-
-.nav__container, .menu {
+.nav__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.burger__img, .close__img {
+    fill: $color-menu-active;
+    stroke-linejoin: round;
+    height: 42px;
+    width: 42px;
+    padding: 10px ;
+
+    &:hover {
+        // text-shadow: 0 0 5px white;
+
+
+        
+    }
+}
+
+.burger[type="checkbox"] {
+    display: none;
+}
+
+.nav__list {
+    display: none;
+}
+
+.nav__list {
+    position: initial;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    position: initial;
+    background: none;
+    box-shadow: none;
+}
+
+// .burger__img {
+//     display: none;
+// }
+
 .nav__container {
+    position: relative;
     height: inherit;
 }
 
-.menu {
-    max-width: 530px;
-    list-style: none;
-    padding: 0;
-}
-
-.menu__item {
+.nav__item {
+    padding: 20px 20px;
+    // border-top: 3px solid transparent;
+    // background: none;
+    // margin: 0;
     margin: 0 10px;
+    background: $color-main-blue;
 
     a {
         text-decoration: none;
         color: white;
         text-transform: uppercase;
         font-size: 14px;
+    }
 
-        &:hover {
-            text-shadow: 0 0 5px white;
+    &:hover {
+        // border-top: 3px solid $color_menu_active;
+        background-color: white;
+        transition: all .3s ease-in-out;
+
+        & a {
+            // color: initial;
+            // font-weight: 700;
+            color: $color-main-blue;
+            // text-shadow: 0 0 5px white;
+            // font-weight: 700;
         }
     }
+}
+
+.burger:checked ~ label .burger__img {
+    display: none;
+}
+
+.burger:checked ~ .nav__list {
+    display: initial;
+}
+
+.burger:not(:checked) + label .close__img {
+    display: none;
+}
+
+.logo {
+    font-family:'Josefin Sans', sans-serif;
+    font-size: 24px;
+    padding: 0 15px;
+}
+
+
+
+.menu {
+    display: none;
+    list-style: none;
+    // float: left;
+    position: absolute;
+    left: 0;
+    top: 63px;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+
 
 }
 
@@ -231,20 +318,23 @@ h1 {
     font-size: 16 px;
     font-family: 'Josefin Sans', sans-serif;
     line-height: 1.5;
-
+    padding: 10px;
+    text-align: center;
 }
 
 .sec1__right {
-    text-align: right;
+    // text-align: right;
+    display: none;
+
 }
 
 .title, .text {
-    text-align: left;
+    text-align: center;
     color: white;
 }
 
 .sec1__right img:nth-child(1) {
-    padding-right: 120px;
+    // padding-right: 120px;
 }
 
 .sec1__title {
@@ -324,5 +414,59 @@ h1 {
     top: 200px;
 }
 
+
+@include respond-to('xsmall') {
+
+    .sec1__right {
+        text-align: right;
+        display: initial;
+    }
+
+    .sec1__right img:nth-child(1) {
+        padding-right: 0;
+    }
+
+    .sec1__left {
+        text-align: initial;
+    }
+
+    .title, .text {
+        text-align: left;
+    }
+}
+
+
+@include respond-to('small') {
+
+    .burger__img {
+        display: none;
+    }
+
+    .sec1__right img:nth-child(1) {
+        padding-right: 120px;
+    }
+
+    .menu {
+        position: initial;
+        display: flex;
+        max-width: 530px;
+        
+        padding: 0;
+    }
+
+    .nav__item {
+        padding: 0;
+        background: none;
+
+        &:hover {
+            background: none;
+
+            a {
+            text-shadow: 0 0 5px white;
+            color: white;
+            }
+        }
+    }
+}
 
 
