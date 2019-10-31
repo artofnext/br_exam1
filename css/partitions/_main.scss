@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
 @font-face {
     font-family: 'aleo';
     src: url('../fonts/aleo-bold-webfont.woff2') format('woff2'),
@@ -55,6 +56,10 @@ h1 {
 }
 
 h2 {
+    font-size: 36px;
+}
+
+h3 {
     font-size: 20px;
 }
 
@@ -462,6 +467,8 @@ h2 {
 
 #sec04_bg {
     background-image: url('../img/sec04_bg.png');
+    height: 800px;
+    background-size: cover;
 }
 
 .sec__container {
@@ -487,8 +494,53 @@ h2 {
 }
 
 .sec4__content {
-    position: absolute;
-    top: 200px;
+    padding-top: 30px;
+    // text-align: center;
+}
+
+.sec4__title {
+    text-align: center;
+}
+
+
+
+.comment__title {
+    text-transform: uppercase;
+    margin: 0 0 43px 0;
+}
+
+.little__shit {
+    color: $color-main-blue;
+    font-size: 32px;
+}
+
+.comment__text {
+    margin: 0;
+    font-size: 14px;
+}
+
+.comment__container {
+    background-color: $color-sec11;
+    display: flex;
+    flex-direction: column;
+    max-width: 445px;
+    margin: 0 auto;
+}
+
+.comment__img {
+    background-image: url(../img/sec04_img.png);
+    height: 284px;
+    width: 445px;
+    // flex-basis: 445px;
+}
+
+.comment__wrapper {
+    flex-shrink: 100;
+    padding: 50px;
+}
+
+.sec4__title {
+    text-align: center;
 }
 
 
@@ -585,6 +637,12 @@ h2 {
     .sec__container {
         text-align: left;
     }
+
+    .sec4__title {
+        text-align: center;
+    }
+
+    
 }
 
 
@@ -638,6 +696,35 @@ h2 {
 
     .label {
         font-size: 36px;
+    }
+}
+
+@include respond-to('large') {
+
+    .comment__container {
+        // background-color: $color-sec11;
+        // display: flex;
+        flex-direction: row;
+        max-width: unset;
+    }
+
+    .comment__img {
+        // background-image: url(../img/sec04_img.png);
+        height: 284px;
+        width: 445px;
+        flex-basis: 445px;
+    }
+
+    .sec4__content {
+        padding-top: 100px;
+    }
+    
+    .sec4__title {
+        margin-bottom: 90px;
+    }
+
+    #sec04_bg {
+        height: 730px;
     }
 }
 
